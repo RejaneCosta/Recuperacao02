@@ -41,7 +41,7 @@ class Main:
         elif (opcao == "5"):
             self.listar_tarefas()
         elif (opcao == "6"):
-            self.excluir_tarefas()
+            self.excluir_tarefa()
         elif (opcao == "7"):
             print("Finalizando processo, após muito estudo")
             self.em_execucao = False
@@ -57,7 +57,7 @@ class Main:
         contato = Contato()
         contato.set_nome(nome)
         contato.set_telefone(telefone)
-        contato.get_email(email)
+        contato.get_email()
 
         self.agenda.add_contato(contato)
         print("Contato adicionado a lista")
@@ -69,7 +69,6 @@ class Main:
             print("Contato nº " + str(indice) + ". Contato: " + contato.get_nome() + " | Tel: " + contato.get_telefone())
 
     def excluir_contato(self):
-        self.excluir_contato()
         indice_para_excluir = input("Digite o número do contato que deseja excluir: ")
 
         try:
@@ -81,7 +80,7 @@ class Main:
         self.agenda.remover_contato(contato_selecionado)
         print("Contato Excluido")
 
-    def cadastrar_tarefa(self):
+    def criar_tarefa(self):
         print("Nova Tarefa")
         descricao = input("Descrição: ")
         status = input("Concluida: 1 - Sim | 2 - Não")
@@ -95,8 +94,8 @@ class Main:
         else:
             print("Status Inválido")
 
-            self.agenda.add_tarefas(tarefa)
-            print("Tarefa adicionado")
+        self.agenda.add_tarefas(tarefa)
+        print("Tarefa adicionado")
 
     def listar_tarefas(self):
         print("Tarefas Cadastradas")
