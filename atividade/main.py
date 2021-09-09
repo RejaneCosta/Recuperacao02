@@ -13,7 +13,7 @@ class Main:
 
     def mostar_menu(self):
         print("======================")
-        print(" AGENDA VIRUTAL ")
+        print(" AGENDA VIRTUAL ")
         print("======================")
         print("selecione uma opção: ")
         print("-----------------------")
@@ -104,18 +104,14 @@ class Main:
             print("Tarefa nº " + str(indice) + " - " + tarefa.get_descricao() + " | Status: " + tarefa.get_status())
 
     def excluir_tarefa(self):
-        self.listar_tarefas()
         indice_para_excluir = input("Digite o número da tarefa que deseja excluir: ")
 
         try:
             tarefa_selecionada = self.agenda.get_tarefa(int(indice_para_excluir))
         except:
-            print("Tarefa Inválido")
+            print("Tarefa Inválida")
             return
 
         self.agenda.remover_tarefa(tarefa_selecionada)
         print("Tarefa Excluida")
-
-
-
 

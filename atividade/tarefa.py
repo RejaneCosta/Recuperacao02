@@ -21,9 +21,9 @@ class Tarefa:
         self.__status = "Pendente"
 
     def remover_tarefa(self, tarefa):
-        self.__tarefas.remove(tarefa)
+        self.__tarefa.remove(tarefa)
 
     def get_tarefa(self, posicao_tarefa):
-        return self.__tarefas[posicao_tarefa]
+        return self.__tarefa[posicao_tarefa]
 
 

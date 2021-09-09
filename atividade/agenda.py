@@ -26,11 +26,17 @@ class Agenda:
 
     def get_tarefas(self):
         return self.__tarefas
+
     def add_tarefas(self, tarefas):
         self.__tarefas.append(tarefas)
 
     def remover_contato(self, contato):
         self.__contatos.remove(contato)
-
     def get_contato(self, posicao_contato):
         return self.__contatos[posicao_contato]
+
+    def remover_tarefa(self, tarefa):
+        self.__tarefas.remove(tarefa)
+    def get_tarefa(self, posicao_tarefa):
+        return self.__tarefas[posicao_tarefa]
+
